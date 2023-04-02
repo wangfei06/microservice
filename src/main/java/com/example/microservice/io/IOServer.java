@@ -25,6 +25,7 @@ public class IOServer {
                     new Thread(() -> {
                         try {
                             byte[] data = new byte[1024];
+                            //获取客户端传入的数据流
                             InputStream inputStream = socket.getInputStream();
                             while (true) {
                                 int len;
