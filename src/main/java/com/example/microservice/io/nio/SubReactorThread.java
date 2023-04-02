@@ -26,7 +26,6 @@ public class SubReactorThread extends Thread{
             this.businessExecutorPool = businessExecutorPool;
             this.selector = Selector.open();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
