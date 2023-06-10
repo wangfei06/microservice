@@ -25,7 +25,7 @@ public class Producer {
 
         channel.queueDeclare(QUEUE_NAME,true,false,false,null);
 
-        String message = "Hello World";
+        String message = "Sunny day";
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
         System.out.println("消息已发送：+ " + message);
 
