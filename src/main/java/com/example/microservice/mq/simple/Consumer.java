@@ -1,4 +1,4 @@
-package com.example.microservice.mq;
+package com.example.microservice.mq.simple;
 
 import com.rabbitmq.client.*;
 
