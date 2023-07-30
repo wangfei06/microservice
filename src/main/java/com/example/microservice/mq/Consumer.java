@@ -5,6 +5,9 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * 简单模式
+ */
 public class Consumer {
     static final String QUEUE_NAME = "my_queue";
 
@@ -20,7 +23,9 @@ public class Consumer {
         Connection connection = null;
         Channel channel = null;
         try {
+            //建立连接
             connection = connectionFactory.newConnection();
+            //创建通道
             channel = connection.createChannel();
 
             channel.basicConsume(QUEUE_NAME, true, new DeliverCallback() {
